@@ -4,7 +4,7 @@ import CartItem from "../cartItem/CartItem";
 import styles from "./Cart.module.css";
 
 function Cart() {
-  const { cartItemsList } = useCart();
+  const { cartItemsList, handleConfirm } = useCart();
 
   return (
     <div className={styles.cartCont}>
@@ -16,7 +16,7 @@ function Cart() {
             return <CartItem key={item.id} item={item} />;
           })}
           <div className={styles.btnCont}>
-            <Button text="Confirm Order" />
+            <Button cbFunc={handleConfirm}>Confirm Order</Button>
           </div>
         </>
       ) : (

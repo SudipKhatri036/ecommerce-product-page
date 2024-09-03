@@ -1,6 +1,67 @@
 .main {
   width: 100%;
-  padding: 2rem;
-  border: 1px solid red;
+  padding: 1rem 3rem;
   position: relative;
+}
+
+.main section {
+  height: calc(100vh - 120px);
+  gap: 6rem;
+  text-align: left;
+}
+
+.productImgCont {
+  width: 55%;
+}
+
+.bigImage {
+  width: 100%;
+  height: 370px;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+  animation: fadeIn 1s ease-in;
+}
+
+@media only screen and (max-width: 1061px) {
+  .main section {
+    gap: 3rem;
+  }
+}
+
+@media only screen and (max-width: 928px) {
+  .main {
+    padding-inline: 0;
+  }
+}
+
+@media only screen and (max-width: 786px) {
+  .main {
+    padding-top: 0;
+  }
+  .main section {
+    gap: 0rem;
+    height: auto;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .productImgCont {
+    width: 100%;
+  }
+
+  .bigImage {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 0px;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

@@ -1,0 +1,60 @@
+.productDetailCont {
+  width: 50%;
+}
+
+.productDetailCont h3 {
+  font-size: 1rem;
+  color: var(--color-dgblue);
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+}
+
+.productDetailCont h1 {
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  color: var(--color-dblue);
+}
+
+.desc {
+  color: var(--color-dgblue);
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  line-height: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.price {
+  font-size: 1.1rem;
+  font-weight: var(--font-b);
+  margin-right: 1rem;
+}
+
+.discountRate {
+  padding: 0.1rem 0.5rem;
+  background-color: var(--color-dblue);
+  color: white;
+  border-radius: 6px;
+  font-size: 0.7rem;
+  font-weight: var(--font-b);
+}
+
+.mrp {
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  font-weight: var(--font-b);
+  text-decoration: line-through;
+  color: var(--color-dgblue);
+}
+
+@media only screen and (max-width: 786px) {
+  .productDetailCont {
+    width: 100%;
+    padding: 1.5rem;
+  }
+
+  .priceDetailCont {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
