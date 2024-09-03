@@ -1,0 +1,99 @@
+.nav {
+  width: 100%;
+}
+
+.nav button {
+  display: none;
+  display: none;
+  color: var(--color-dgblue);
+  cursor: pointer;
+}
+
+.nav ul {
+  gap: 1rem;
+  list-style: none;
+}
+
+.nav li {
+  position: relative;
+}
+
+.nav li:hover a {
+  color: var(--color-dblue);
+}
+
+.nav li:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background-color: var(--color-primary);
+  bottom: -155%;
+  opacity: 0;
+  left: 0;
+  transition: var(--trans-three);
+}
+
+.nav li:hover:after {
+  opacity: 1;
+}
+
+@media only screen and (max-width: 786px) {
+  .nav {
+    width: 100%;
+    min-width: 400px;
+    padding: 3rem;
+    position: absolute;
+    left: -215%;
+    min-height: 100vh;
+    top: -30px;
+    z-index: 99;
+    transition: var(--trans-three);
+    background-color: white;
+  }
+
+  .navActive {
+    left: -5%;
+  }
+
+  .nav button {
+    width: 100%;
+    font-size: 1.5rem;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    margin-top: 5rem;
+    font-size: 2rem;
+    align-items: flex-start;
+  }
+
+  .nav li a {
+    color: var(--color-dblue);
+  }
+
+  .nav button {
+    width: 100%;
+    display: block;
+    text-align: left;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .nav {
+    min-width: 300px;
+  }
+
+  .nav li:after {
+    bottom: 0;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .nav {
+    min-width: 180px;
+  }
+
+  .nav ul {
+    font-size: 1.5rem;
+  }
+}

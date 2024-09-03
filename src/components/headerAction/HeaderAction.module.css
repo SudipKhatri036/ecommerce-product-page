@@ -1,0 +1,46 @@
+.actionCont {
+  gap: 2rem;
+}
+
+.profile {
+  width: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid white;
+  transition: var(--trans-three);
+}
+
+.profile:hover {
+  border: 2px solid var(--color-primary);
+}
+
+.cartIcon {
+  height: 30px;
+  width: 40px;
+  cursor: pointer;
+  color: var(--color-dgblue);
+  margin-top: 0.5rem;
+  transition: var(--trans-three);
+}
+
+.cartIcon:hover {
+  color: var(--color-dblue);
+}
+
+.cartCount {
+  position: absolute;
+  top: -5%;
+  left: 20%;
+  font-size: 0.6rem;
+  background-color: var(--color-primary);
+  padding: 0.3rem 0.5rem;
+  border-radius: 50%;
+  color: white;
+  font-weight: var(--font-b);
+}
+
+@media only screen and (max-width: 500px) {
+  .actionCont {
+    gap: 1rem;
+  }
+}

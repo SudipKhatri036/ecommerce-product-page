@@ -1,0 +1,16 @@
+.primaryBtn {
+  font-family: inherit;
+  width: 100%;
+  background-color: var(--color-primary);
+  border: none;
+  transition: var(--trans-three);
+  border-radius: 12px;
+  padding: 1rem;
+  font-weight: var(--font-b);
+  cursor: pointer;
+  transition: var(--trans-three);
+}
+
+.primaryBtn:hover {
+  opacity: 0.7;
+}
