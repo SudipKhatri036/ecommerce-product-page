@@ -4,10 +4,10 @@ import Logo from "../logo/Logo";
 import Navbar from "../navbar/Navbar";
 import HeaderAction from "../headerAction/HeaderAction";
 import styles from "./Header.module.css";
-import { useCart } from "../../context/CartContext";
+import { useNav } from "../../context/NavContext";
 
 function Header() {
-  const { handleMenuOpen } = useCart();
+  const { handleMenuOpen } = useNav();
   return (
     <header className={styles.header}>
       <div className="flex">

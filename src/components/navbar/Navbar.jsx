@@ -1,9 +1,9 @@
-import { useCart } from "../../context/CartContext";
+import { useNav } from "../../context/NavContext";
 import { ImCross } from "react-icons/im";
 import styles from "./Navbar.module.css";
 
 function Navbar() {
-  const { isNavActive, handleMenuClose } = useCart();
+  const { isNavActive, handleMenuClose } = useNav();
   return (
     <nav className={`${styles.nav}  ${isNavActive ? styles.navActive : ""}`}>
       <button onClick={handleMenuClose}>

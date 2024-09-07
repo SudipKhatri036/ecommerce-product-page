@@ -1,26 +1,32 @@
 import { useCart } from "../../context/CartContext";
-import BigImage from "../bigImage/BigImage";
+import { useNav } from "../../context/NavContext";
+import { useProductShow } from "../../context/ProductShowContext";
 import Cart from "../cartcomp/Cart";
+import Overlay from "../overlay/Overlay";
 import ProductDetail from "../productdetail/ProductDetail";
-import ThumbnailImages from "../thumbnailimage/ThumbnailImages";
+import ProductShowcase from "../productShowcase/ProductShowcase";
+import Slider from "../slider/Slider";
+
 import styles from "./Main.module.css";
 function Main() {
   const { isCartOpen, ToastContainer } = useCart();
+
+  const { showSlider } = useProductShow();
   return (
     <main className={styles.main}>
       {isCartOpen && <Cart />}
       <section className="flex">
         <div className={styles.productImgCont}>
-          <BigImage />
-          <ThumbnailImages />
+          <ProductShowcase />
         </div>
 
         <ProductDetail />
       </section>
+      {showSlider ? <Slider /> : null}
+
       <ToastContainer
         position="top-right"
         autoClose={1000}
-        hideProgressBar={false}
         newestOnTop={false}
         closeOnClick
         rtl={false}

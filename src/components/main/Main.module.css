@@ -1,12 +1,12 @@
 .main {
   width: 100%;
-  padding: 1rem 3rem;
   position: relative;
 }
 
 .main section {
   height: calc(100vh - 120px);
   gap: 6rem;
+  padding: 1rem 3rem;
   text-align: left;
 }
 
@@ -30,16 +30,14 @@
 }
 
 @media only screen and (max-width: 928px) {
-  .main {
+  .main section {
     padding-inline: 0;
   }
 }
 
 @media only screen and (max-width: 786px) {
-  .main {
-    padding-top: 0;
-  }
   .main section {
+    padding-top: 0;
     gap: 0rem;
     height: auto;
     flex-direction: column;

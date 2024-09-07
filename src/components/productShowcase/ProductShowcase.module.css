@@ -1,0 +1,43 @@
+.thumbnailImageCont img {
+  width: 90px;
+  height: 80px;
+  object-fit: cover;
+  cursor: pointer;
+  border-radius: 8px;
+  border: 2px solid transparent;
+  transition: border 0.3s ease, transform 0.3s ease;
+  position: relative;
+}
+
+.thumbnailImageCont ul {
+  gap: 2rem;
+  justify-content: center;
+}
+.thumbnailImageCont li {
+  position: relative;
+}
+
+/* .thumbnailImageCont li::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #ffffffd0;
+  z-index: 9;
+  opacity: 0;
+} */
+
+:global(.imgActive) img {
+  border: 2px solid var(--color-primary);
+  border-radius: 8px;
+  transform: scale(1.05);
+}
+
+@media only screen and (max-width: 1061px) {
+  .thumbnailImageCont img {
+    width: 70px;
+    height: 60px;
+  }
+}

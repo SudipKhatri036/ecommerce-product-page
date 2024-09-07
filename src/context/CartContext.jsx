@@ -9,12 +9,9 @@ function CalculateTotalCartItem(items) {
 }
 
 function CartProvider({ children }) {
-  const [isNavActive, setIsNavActive] = useState(false);
   const [cartItemsList, setcartItemsList] = useState([]);
   const [isCartOpen, setIsCartOpen] = useState(false);
   const [qty, setQty] = useState(0);
-  const [bigImg, setBigImg] = useState("./image-product-1.jpg");
-
   const totalCartItem = CalculateTotalCartItem(cartItemsList);
 
   function handleAddToCart() {
@@ -46,13 +43,6 @@ function CartProvider({ children }) {
     setcartItemsList([...newCartList]);
   }
 
-  function handleMenuOpen() {
-    setIsNavActive(true);
-  }
-  function handleMenuClose() {
-    setIsNavActive(false);
-  }
-
   function handleCartOpen() {
     setIsCartOpen((isOpen) => !isOpen);
   }
@@ -62,26 +52,16 @@ function CartProvider({ children }) {
     setcartItemsList([]);
   }
 
-  function handleSmallImgClick(indx) {
-    setBigImg(`./image-product-${indx}.jpg`);
-  }
-
   return (
     <CartContext.Provider
       value={{
-        bigImg,
-        isNavActive,
-        setIsNavActive,
         cartItemsList,
         setcartItemsList,
-        handleMenuClose,
-        handleMenuOpen,
         handleAddToCart,
         isCartOpen,
         handleCartOpen,
         handleDelete,
         handleConfirm,
-        handleSmallImgClick,
         totalCartItem,
         qty,
         setQty,
