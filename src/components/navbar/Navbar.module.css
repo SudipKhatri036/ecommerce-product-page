@@ -4,7 +4,6 @@
 
 .nav button {
   display: none;
-  display: none;
   color: var(--color-dgblue);
   cursor: pointer;
 }
@@ -56,11 +55,6 @@
     left: -10%;
   }
 
-  .nav button {
-    width: 100%;
-    font-size: 1.5rem;
-  }
-
   .nav ul {
     flex-direction: column;
     margin-top: 5rem;
@@ -73,9 +67,10 @@
   }
 
   .nav button {
-    width: 100%;
+    width: auto;
     display: block;
     text-align: left;
+    font-size: 1.5rem;
   }
 }
 @media only screen and (max-width: 500px) {
@@ -90,10 +85,10 @@
 
 @media only screen and (max-width: 400px) {
   .nav {
-    min-width: 180px;
+    min-width: 220px;
   }
   .navActive {
-    left: -30%;
+    left: -20%;
   }
   .nav ul {
     font-size: 1.5rem;

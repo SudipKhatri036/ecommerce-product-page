@@ -12,6 +12,7 @@
 
 .productImgCont {
   width: 55%;
+  position: relative;
 }
 
 .bigImage {
@@ -20,7 +21,15 @@
   border-radius: 8px;
   margin-bottom: 0.5rem;
   cursor: pointer;
-  animation: fadeIn 1s ease-in;
+  animation: fadeIn 0.5s ease-in;
+}
+
+:global(.mainNextBtn) {
+  right: 5%;
+}
+
+:global(.mainPrevBtn) {
+  left: 5%;
 }
 
 @media only screen and (max-width: 1061px) {

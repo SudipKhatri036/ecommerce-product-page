@@ -17,22 +17,37 @@
   position: relative;
 }
 
-/* .thumbnailImageCont li::before {
+.thumbnailImageCont li::before {
   content: "";
   position: absolute;
   top: 0;
-  bottom: 0;
   left: 0;
-  right: 0;
-  background-color: #ffffffd0;
-  z-index: 9;
+  width: 100%;
+  height: 95%;
+  background-color: rgba(255, 255, 255, 0.6);
   opacity: 0;
-} */
+  border-radius: 8px;
+  z-index: 1;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
 
 :global(.imgActive) img {
   border: 2px solid var(--color-primary);
   border-radius: 8px;
   transform: scale(1.05);
+}
+
+.thumbnailImageCont :global(.imgActive)::before {
+  opacity: 1;
+}
+
+.thumbnailImageCont li:hover::before {
+  opacity: 1;
+}
+
+.thumbnailImageCont ul:global(.hide) {
+  display: none;
 }
 
 @media only screen and (max-width: 1061px) {

@@ -1,8 +1,7 @@
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { useCart } from "../../context/CartContext";
-import { useNav } from "../../context/NavContext";
 import { useProductShow } from "../../context/ProductShowContext";
 import Cart from "../cartcomp/Cart";
-import Overlay from "../overlay/Overlay";
 import ProductDetail from "../productdetail/ProductDetail";
 import ProductShowcase from "../productShowcase/ProductShowcase";
 import Slider from "../slider/Slider";
@@ -10,6 +9,7 @@ import Slider from "../slider/Slider";
 import styles from "./Main.module.css";
 function Main() {
   const { isCartOpen, ToastContainer } = useCart();
+  const { handleNext, handlePrev } = useProductShow();
 
   const { showSlider } = useProductShow();
   return (
@@ -17,7 +17,16 @@ function Main() {
       {isCartOpen && <Cart />}
       <section className="flex">
         <div className={styles.productImgCont}>
-          <ProductShowcase />
+          <ProductShowcase>
+            <FaChevronLeft
+              className={`btnSlide mainPrevBtn`}
+              onClick={handlePrev}
+            />
+            <FaChevronRight
+              className={`btnSlide mainNextBtn`}
+              onClick={handleNext}
+            />
+          </ProductShowcase>
         </div>
 
         <ProductDetail />

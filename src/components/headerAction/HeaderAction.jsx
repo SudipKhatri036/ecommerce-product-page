@@ -1,6 +1,7 @@
 import { useCart } from "../../context/CartContext";
-import styles from "./HeaderAction.module.css";
 import { MdOutlineShoppingCart } from "react-icons/md";
+
+import styles from "./HeaderAction.module.css";
 
 function HeaderAction() {
   const { handleCartOpen, totalCartItem } = useCart();

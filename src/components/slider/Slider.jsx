@@ -15,15 +15,9 @@ function Slider() {
             className={styles.sliderClose}
             onClick={() => setShowSlider(false)}
           />
-          <FaChevronLeft
-            className={`${styles.btnSlide} prev-btn`}
-            onClick={handlePrev}
-          />
+          <FaChevronLeft className={`btnSlide prevBtn`} onClick={handlePrev} />
           <ProductShowcase />
-          <FaChevronRight
-            className={`${styles.btnSlide} next-btn`}
-            onClick={handleNext}
-          />
+          <FaChevronRight className={`btnSlide nextBtn`} onClick={handleNext} />
         </div>
       </div>
     </>
